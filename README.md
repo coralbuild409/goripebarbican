@@ -1,4 +1,4 @@
-# trie-store-4bc20d
+# trie-store-c3f2f2
 
 A Rust trie-store utility.
 

